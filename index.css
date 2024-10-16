@@ -1,0 +1,288 @@
+.* {
+    margin: 0;
+    --header-background: #131921;
+    --nav-background: #232f3e;
+}
+body{
+    background-color:palevioletred;
+}
+
+header {
+    background-color: var(--header-background);
+    /* color: white; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+}
+
+.headerOption {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 0 10px;
+    border: 1px solid var(--header-background);
+    border-radius: 2px;
+    margin: 3px;
+    padding: 10px;
+    height: 35px;
+}
+
+.headerOption:hover {
+    cursor: pointer;
+    border-color: white;
+}
+
+.headerOption_text>h3 {
+    font-size: 14px;
+    font-weight: 100;
+    font-family: Calibri;
+    color: rgb(215, 213, 213);
+}
+
+.headerOption_text>h1 {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Calibri;
+    color: white;
+}
+
+.headerOption>img {
+    width: 100px;
+}
+
+.cartData>h3{
+    color: white;
+    /* background-color: green;
+    padding: 5px;
+    border-radius: 50%; */
+
+    margin-bottom: 25px;
+}
+
+.search {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.search>i {
+    font-size: 22px;
+    background-color: orange;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    line-height: 32px;
+}
+
+.search>input {
+    width: 90%;
+    height: 30px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+
+
+/* ------------------nav------------------ */
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--nav-background);
+}
+
+nav>p {
+    color: white;
+    font-family: calibri;
+    font-size: 16px;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 2px;
+    border: 1px solid var(--nav-background);
+}
+
+nav>p:hover {
+    cursor: pointer;
+    border-color: white;
+}
+
+/* -----------------------------Slideshow---------------------------------------------- */
+body>img {
+    width: 100%;
+    height: 600px;
+    /* 600px becoz it was in amazon website 600px when inspect */
+    object-fit: cover;
+    margin-bottom: -300px;
+}
+
+
+
+
+/* -------------------------products list------------------------------------ */
+
+.productsContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin: auto;
+    width: 1320px;
+}
+
+@media(max-width: 1320px) {
+    .productsContainer {
+        grid-template-columns: auto auto auto auto;
+        width: 1050px;
+    }
+    .fourth {
+        display: none;
+    }
+}
+
+@media(max-width: 1050px) {
+    .productsContainer {
+        grid-template-columns: auto auto auto;
+        width: 790px;
+    }
+    .third{
+        display: none;
+    }
+}
+
+@media(max-width: 790px) {
+    .productsContainer {
+        grid-template-columns: auto auto;
+        width: 530px;
+    }
+    .second {
+        display: none;
+    }
+}
+
+@media(max-width: 530px) {
+    .productsContainer {
+        grid-template-columns: auto;
+        width: 270px;
+    }
+     .first {
+        display: none;
+    }
+}
+
+.product {
+
+    width: 220px;
+    padding: 10px;
+    /* border: 1px solid gray; */
+    border-radius: 5px;
+    margin: 10px;
+    background-color: white;
+}
+
+.product>img {
+    width: 100%;
+    object-fit: contain;
+    height: 100px;
+    margin-bottom: 5px;
+
+}
+
+.product>p {
+    text-align: right;
+    margin-bottom: 5px;
+    color: orange;
+    font-family: calibri;
+}
+
+.product>h1 {
+    font-family: calibri;
+    margin-bottom: 5px;
+    font-size: 18px;
+    text-align: center;
+    height: 45px;
+}
+
+.product>h2 {
+    font-family: calibri;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 100;
+    height: 70px;
+    overflow: hidden;
+}
+
+.productPrice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px auto;
+    width: 80%;
+}
+
+.productPrice>h3 {
+    font-size: 15px;
+    font-weight: 800;
+    font-family: calibri;
+}
+
+.product>button {
+    background-color: orange;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-family: calibri;
+    font-size: 18px;
+    color: white;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    display: block;
+}
+
+.product>button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
+}
+
+.productRating>i {
+    color: orange;
+}
+
+/* ---------------------------------------Footer---------------------------------------------- */
+footer{
+background-color: #232F3E;
+padding-bottom: 100px;
+}
+footer>hr{
+    border: 1px solid gray;
+}
+.footerTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+.footerTop_Data >h2{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 12px;
+    font-family: calibri;
+
+}
+.footerTop_Data>h3 {
+    font-size: 16px;
+    color: rgb(203, 201, 201);
+    margin-bottom: 12px;
+    font-family: calibri;
+    font-weight: 100;
+
+}
